@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Pressable, Text, View, Platform } from "react-native";
+import { Pressable, Text, View, Platform, } from "react-native";
 
 function CategoryGridTile({ title, color }) {
   return (
@@ -12,7 +12,7 @@ function CategoryGridTile({ title, color }) {
         android_ripple={{ color: "#ccc" }}
       >
         <View style={[styles.innerContainer, { backgroundColor: color }]}>
-          <Text>{title}</Text>
+          <Text style={styles.title}>{title}</Text>
         </View>
       </Pressable>
     </View>
@@ -47,7 +47,7 @@ innerContainer: {
     justifyContent: "center",
   },
   title: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
     fontSize: 18,
   },
 });
